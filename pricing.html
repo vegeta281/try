@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Pricing | CleanMaster Pro</title>
+    <meta name="description" content="View detailed pricing for our professional cleaning services. We offer transparent pricing for all home and office cleaning solutions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Additional styles for pricing page */
+        .page-header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-section {
+            padding: 80px 0;
+        }
+        
+        .pricing-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .pricing-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .pricing-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .pricing-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .pricing-table tr:hover td {
+            background-color: rgba(0, 114, 188, 0.05);
+        }
+        
+        .pricing-table .price {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .add-on-section {
+            background-color: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .add-on-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .add-on-item {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .add-on-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .add-on-price {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .discount-section {
+            padding: 80px 0;
+        }
+        
+        .discount-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .discount-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .discount-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .discount-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .discount-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--success-color);
+            margin-bottom: 15px;
+        }
+        
+        .discount-note {
+            font-style: italic;
+            color: #777;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="CleanMaster Pro Logo">
+                <h1>CleanMaster Pro</h1>
+            </a>
+            
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Service Pricing</h1>
+            <p>Transparent pricing for all our professional cleaning services</p>
+        </div>
+    </div>
+
+    <!-- Full Home Cleaning Pricing -->
+    <section class="pricing-section">
+        <div class="container pricing-container">
+            <div class="pricing-card">
+                <h3>Full Home Cleaning</h3>
+                <p>Comprehensive cleaning service for your entire home. Pricing based on apartment size and furnishing status.</p>
+                
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Apartment Size</th>
+                            <th>Furnished (₹)</th>
+                            <th>Non-Furnished (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1RK</td>
+                            <td class="price">2,000</td>
+                            <td class="price">1,500</td>
+                        </tr>
+                        <tr>
+                            <td>1BHK</td>
+                            <td class="price">2,500</td>
+                            <td class="price">2,000</td>
+                        </tr>
+                        <tr>
+                            <td>2BHK</td>
+                            <td class="price">4,500</td>
+                            <td class="price">4,000</td>
+                        </tr>
+                        <tr>
+                            <td>3BHK</td>
+                            <td class="price">5,500</td>
+                            <td class="price">5,000</td>
+                        </tr>
+                        <tr>
+                            <td>4BHK</td>
+                            <td class="price">7,000</td>
+                            <td class="price">6,000</td>
+                        </tr>
+                        <tr>
+                            <td>5BHK</td>
+                            <td class="price">10,000</td>
+                            <td class="price">8,500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Kitchen Deep Clean</h3>
+                <p>Thorough cleaning of your kitchen including appliances, cabinets, and hard-to-reach areas. Pricing based on apartment size.</p>
+                
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Apartment Size</th>
+                            <th>Price (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1BHK</td>
+                            <td class="price">1,500</td>
+                        </tr>
+                        <tr>
+                            <td>2BHK</td>
+                            <td class="price">2,000</td>
+                        </tr>
+                        <tr>
+                            <td>3BHK</td>
+                            <td class="price">2,500</td>
+                        </tr>
+                        <tr>
+                            <td>4BHK</td>
+                            <td class="price">3,000</td>
+                        </tr>
+                        <tr>
+                            <td>5BHK</td>
+                            <td class="price">3,500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Bathroom Cleaning</h3>
+                <p>Deep cleaning of your bathrooms including sanitization and scrubbing of all surfaces. Pricing based on number of bathrooms.</p>
+                
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Price (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Per Bathroom</td>
+                            <td class="price">500</td>
+                        </tr>
+                        <tr>
+                            <td>Minimum (3 Bathrooms)</td>
+                            <td class="price">1,500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-on Services -->
+    <section class="add-on-section">
+        <div class="container pricing-container">
+            <div class="section-title">
+                <h2>Add-on Services</h2>
+                <p>Enhance your cleaning experience with these optional services</p>
+            </div>
+            
+            <div class="add-on-grid">
+                <div class="add-on-item">
+                    <h4>Carpet Shampoo</h4>
+                    <div class="add-on-price">₹600 per carpet</div>
+                    <p>Deep cleaning and sanitization of your carpets to remove dirt, stains, and allergens.</p>
+                </div>
+                
+                <div class="add-on-item">
+                    <h4>Fridge Cleaning</h4>
+                    <div class="add-on-price">₹400</div>
+                    <p>Thorough cleaning of your refrigerator including shelves, drawers, and seals.</p>
+                </div>
+                
+                <div class="add-on-item">
+                    <h4>Sofa Shampoo</h4>
+                    <div class="add-on-price">₹150 per seat</div>
+                    <p>Professional cleaning of your sofas and upholstery to remove stains and odors.</p>
+                </div>
+                
+                <div class="add-on-item">
+                    <h4>Microwave Cleaning</h4>
+                    <div class="add-on-price">₹200</div>
+                    <p>Complete cleaning of your microwave including interior, exterior, and turntable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Discounts -->
+    <section class="discount-section">
+        <div class="container pricing-container">
+            <div class="section-title">
+                <h2>Payment Options</h2>
+                <p>Choose your preferred payment method and enjoy our special discounts</p>
+            </div>
+            
+            <div class="discount-grid">
+                <div class="discount-card">
+                    <h3>Pay 10% Advance</h3>
+                    <div class="discount-amount">₹500 OFF</div>
+                    <p>Secure your booking with just 10% advance payment and enjoy a discount on your total service cost.</p>
+                    <div class="discount-note">Discount applied to final bill</div>
+                </div>
+                
+                <div class="discount-card">
+                    <h3>Pay After Service</h3>
+                    <div class="discount-amount">₹200 OFF</div>
+                    <p>Prefer to pay after the service is completed? Get a discount on your total service cost.</p>
+                    <div class="discount-note">Discount applied to final bill</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <h2>Ready to Book Your Cleaning Service?</h2>
+            <p>Experience our professional cleaning services with transparent pricing. Book now and enjoy a spotless, fresh environment.</p>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo-white.png" alt="CleanMaster Pro Logo">
+                    </div>
+                    <p>CleanMaster Pro provides professional cleaning services for homes and offices. We are committed to delivering exceptional quality and customer satisfaction.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Cleaning Street, City, Country</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@cleanmasterpro.com</p>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for cleaning tips and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 CleanMaster Pro. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

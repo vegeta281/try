@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanMaster Pro | Professional Cleaning Services</title>
+    <meta name="description" content="CleanMaster Pro offers professional cleaning services for homes and offices. Book expert cleaners for your space today.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .hero {
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .features-section {
+            background-color: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-box {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 28px;
+            margin: 0 auto 20px;
+        }
+        
+        .feature-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .pricing-preview {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .pricing-card:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+        
+        .pricing-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .pricing-card .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .pricing-card .price-note {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-card ul {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-card li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-card li i {
+            color: var(--success-color);
+            margin-right: 10px;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="CleanMaster Pro Logo">
+                <h1>CleanMaster Pro</h1>
+            </a>
+            
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Professional Cleaning Services at Your Doorstep</h1>
+            <p>Experience spotless cleanliness with our expert cleaning professionals. We deliver quality service that exceeds your expectations.</p>
+            <div class="hero-btns">
+                <a href="booking.html" class="btn">Book a Service</a>
+                <a href="services.html" class="btn btn-outline">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose CleanMaster Pro?</h2>
+                <p>We provide professional cleaning services with unmatched quality and reliability</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Transparent Pricing</h3>
+                    <p>See fixed prices before you book. No hidden charges. Pricing based on apartment size and furnishing status.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Experts Only</h3>
+                    <p>Our professionals are well trained and have on-job expertise. Background verified and quality assured.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Fully Equipped</h3>
+                    <p>We bring everything needed to get the job done well. High-quality cleaning products and equipment.</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>100% Quality Assured</h3>
+                    <p>If you don't love our service, we will make it right. Your satisfaction is our guarantee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We offer a wide range of professional cleaning services to meet all your needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Home Cleaning">
+                    </div>
+                    <div class="service-content">
+                        <h3>Full Home Cleaning</h3>
+                        <p>Comprehensive cleaning solutions for your home, including dusting, vacuuming, mopping, and sanitizing all areas.</p>
+                        <a href="services.html#home-cleaning" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Kitchen Cleaning">
+                    </div>
+                    <div class="service-content">
+                        <h3>Kitchen Deep Clean</h3>
+                        <p>Thorough cleaning of your kitchen including appliances, cabinets, and hard-to-reach areas.</p>
+                        <a href="services.html#kitchen-cleaning" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1600194992538-d800114c4c5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Bathroom Cleaning">
+                    </div>
+                    <div class="service-content">
+                        <h3>Bathroom Cleaning</h3>
+                        <p>Deep sanitization of your bathrooms including tiles, fixtures, and hard-to-reach corners.</p>
+                        <a href="services.html#bathroom-cleaning" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Office Cleaning">
+                    </div>
+                    <div class="service-content">
+                        <h3>Office Cleaning</h3>
+                        <p>Keep your workplace clean and professional with our specialized office cleaning services.</p>
+                        <a href="services.html#office-cleaning" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 40px; text-align: center;">
+                <a href="services.html" class="btn">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview -->
+    <section class="pricing-preview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Service Pricing</h2>
+                <p>Transparent pricing based on apartment size and furnishing status</p>
+            </div>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Full Home Cleaning</h3>
+                    <div class="price">₹1,500 - ₹10,000</div>
+                    <div class="price-note">Based on apartment size and furnishing</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Dusting and wiping surfaces</li>
+                        <li><i class="fas fa-check"></i> Floor cleaning (vacuum/mop)</li>
+                        <li><i class="fas fa-check"></i> Kitchen cleaning</li>
+                        <li><i class="fas fa-check"></i> Bathroom sanitization</li>
+                    </ul>
+                    <a href="pricing.html" class="btn btn-outline">View Detailed Pricing</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Kitchen Deep Clean</h3>
+                    <div class="price">₹1,500 - ₹3,500</div>
+                    <div class="price-note">Based on apartment size</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Appliance cleaning</li>
+                        <li><i class="fas fa-check"></i> Cabinet cleaning</li>
+                        <li><i class="fas fa-check"></i> Countertop sanitization</li>
+                        <li><i class="fas fa-check"></i> Floor deep clean</li>
+                    </ul>
+                    <a href="pricing.html" class="btn btn-outline">View Detailed Pricing</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Bathroom Cleaning</h3>
+                    <div class="price">₹500 per bathroom</div>
+                    <div class="price-note">Minimum ₹1,500 for 3 bathrooms</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Sanitization</li>
+                        <li><i class="fas fa-check"></i> Tile & grout cleaning</li>
+                        <li><i class="fas fa-check"></i> Mirror polishing</li>
+                        <li><i class="fas fa-check"></i> Fixture cleaning</li>
+                    </ul>
+                    <a href="pricing.html" class="btn btn-outline">View Detailed Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Book our cleaning services in just a few simple steps</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Book a Service</h3>
+                    <p>Choose the service you need and select a convenient date and time for your cleaning.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Get Matched</h3>
+                    <p>We'll assign a professional cleaner based on your requirements and location.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>Cleaning Service</h3>
+                    <p>Our professional will arrive at your doorstep and perform the cleaning service.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Enjoy Cleanliness</h3>
+                    <p>Relax and enjoy your spotlessly clean space while we handle the dirty work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Hear from our satisfied customers about their experience with CleanMaster Pro</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-img">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Customer">
+                    </div>
+                    <p>"I've been using CleanMaster Pro for over a year now, and I'm consistently impressed with their attention to detail. My home has never looked better!"</p>
+                    <h4>Sarah Johnson</h4>
+                    <small>Regular Customer</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <h2>Ready for a Spotless Clean?</h2>
+            <p>Book our professional cleaning services today and experience the difference. We guarantee satisfaction with every clean.</p>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo-white.png" alt="CleanMaster Pro Logo">
+                    </div>
+                    <p>CleanMaster Pro provides professional cleaning services for homes and offices. We are committed to delivering exceptional quality and customer satisfaction.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Cleaning Street, City, Country</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@cleanmasterpro.com</p>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for cleaning tips and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 CleanMaster Pro. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | CleanMaster Pro</title>
+    <meta name="description" content="Explore our range of professional cleaning services including home cleaning, office cleaning, deep cleaning, and specialized cleaning solutions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Additional styles for services page */
+        .page-header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-detail {
+            padding: 80px 0;
+        }
+        
+        .service-detail:nth-child(even) {
+            background-color: var(--light-color);
+        }
+        
+        .service-detail-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .service-detail-content.reverse {
+            direction: rtl;
+        }
+        
+        .service-detail-content.reverse .service-detail-text {
+            direction: ltr;
+        }
+        
+        .service-detail-img {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .service-detail-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .service-detail-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .service-detail-text p {
+            margin-bottom: 15px;
+        }
+        
+        .service-features {
+            margin-top: 20px;
+        }
+        
+        .service-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .service-feature i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 18px;
+            margin-top: 3px;
+        }
+        
+        .service-pricing {
+            margin-top: 30px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .service-pricing h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .price-option {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-option:last-child {
+            border-bottom: none;
+        }
+        
+        .price-option-name {
+            font-weight: 500;
+        }
+        
+        .price-option-value {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .pricing-note {
+            font-style: italic;
+            color: #777;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .apartment-size-selector {
+            margin: 20px 0;
+        }
+        
+        .apartment-size-selector label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .apartment-sizes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .apartment-size {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .apartment-size:hover,
+        .apartment-size.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .furnishing-options {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .furnishing-option {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .furnishing-option input {
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .service-detail-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .service-detail-content.reverse {
+                direction: ltr;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="CleanMaster Pro Logo">
+                <h1>CleanMaster Pro</h1>
+            </a>
+            
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn">Book Now</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Our Cleaning Services</h1>
+            <p>Professional cleaning solutions for homes and offices</p>
+        </div>
+    </div>
+
+    <!-- Home Cleaning Service -->
+    <section id="home-cleaning" class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-detail-img">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Home Cleaning Service">
+                </div>
+                <div class="service-detail-text">
+                    <h2>Full Home Cleaning</h2>
+                    <p>Our comprehensive home cleaning service is designed to give you a spotless living space without lifting a finger. Our trained professionals use high-quality cleaning products and equipment to ensure your home shines from top to bottom.</p>
+                    <p>Whether you need a regular cleaning schedule or a one-time deep clean, our team will tailor the service to meet your specific needs and preferences.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Dusting and Wiping</strong>
+                                <p>All surfaces including furniture, shelves, and decor items</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Floor Cleaning</strong>
+                                <p>Vacuuming carpets and mopping hard floors</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Kitchen Cleaning</strong>
+                                <p>Countertops, sink, appliances, and cabinet exteriors</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Bathroom Sanitization</strong>
+                                <p>Toilet, shower, tub, sink, and mirrors</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <h3>Pricing Calculator</h3>
+                        <div class="apartment-size-selector">
+                            <label>Select Apartment Size:</label>
+                            <div class="apartment-sizes">
+                                <div class="apartment-size" data-size="1rk">1RK</div>
+                                <div class="apartment-size" data-size="1bhk">1BHK</div>
+                                <div class="apartment-size" data-size="2bhk">2BHK</div>
+                                <div class="apartment-size" data-size="3bhk">3BHK</div>
+                                <div class="apartment-size" data-size="4bhk">4BHK</div>
+                                <div class="apartment-size" data-size="5bhk">5BHK</div>
+                            </div>
+                        </div>
+                        
+                        <div class="furnishing-options">
+                            <label class="furnishing-option">
+                                <input type="radio" name="furnishing" value="furnished" checked>
+                                Furnished
+                            </label>
+                            <label class="furnishing-option">
+                                <input type="radio" name="furnishing" value="non-furnished">
+                                Non-Furnished
+                            </label>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <div class="price-option">
+                                <span class="price-option-name">Service Price</span>
+                                <span class="price-option-value" id="home-cleaning-price">₹2,000</span>
+                            </div>
+                            <div class="price-option">
+                                <span class="price-option-name">Add-ons</span>
+                                <span class="price-option-value" id="add-ons-price">₹0</span>
+                            </div>
+                            <div class="price-option">
+                                <span class="price-option-name">Total</span>
+                                <span class="price-option-value" id="total-price">₹2,000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-note">
+                            * Pricing based on standard cleaning requirements. Additional charges may apply for heavily soiled areas or special requests.
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="booking.html" class="btn">Book This Service</a>
+                        <a href="pricing.html" class="btn btn-outline" style="margin-left: 10px;">View Detailed Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kitchen Deep Cleaning Service -->
+    <section id="kitchen-cleaning" class="service-detail">
+        <div class="container">
+            <div class="service-detail-content reverse">
+                <div class="service-detail-img">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kitchen Deep Cleaning Service">
+                </div>
+                <div class="service-detail-text">
+                    <h2>Kitchen Deep Cleaning</h2>
+                    <p>Our kitchen deep cleaning service tackles all the hard-to-reach areas and stubborn grease that accumulate in your kitchen over time. This specialized service ensures your cooking space is spotless and hygienic.</p>
+                    <p>We focus on cleaning all appliances, cabinets, countertops, and fixtures to restore your kitchen to its pristine condition.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Appliance Cleaning</strong>
+                                <p>Refrigerator, microwave, oven, dishwasher, and other kitchen appliances</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Cabinet Cleaning</strong>
+                                <p>Interior and exterior cleaning of cabinets and drawers</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Countertop Sanitization</strong>
+                                <p>Deep cleaning and sanitizing of all countertops and surfaces</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Floor Deep Clean</strong>
+                                <p>Specialized cleaning for kitchen floors including grout lines</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <h3>Pricing by Apartment Size</h3>
+                        <div class="apartment-size-selector">
+                            <label>Select Apartment Size:</label>
+                            <div class="apartment-sizes">
+                                <div class="apartment-size" data-size="1bhk">1BHK</div>
+                                <div class="apartment-size" data-size="2bhk">2BHK</div>
+                                <div class="apartment-size" data-size="3bhk">3BHK</div>
+                                <div class="apartment-size" data-size="4bhk">4BHK</div>
+                                <div class="apartment-size" data-size="5bhk">5BHK</div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <div class="price-option">
+                                <span class="price-option-name">Service Price</span>
+                                <span class="price-option-value" id="kitchen-cleaning-price">₹1,500</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-note">
+                            * Pricing for kitchen deep cleaning only. Does not include other areas of the home.
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="booking.html" class="btn">Book This Service</a>
+                        <a href="pricing.html" class="btn btn-outline" style="margin-left: 10px;">View Detailed Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bathroom Cleaning Service -->
+    <section id="bathroom-cleaning" class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-detail-img">
+                    <img src="https://images.unsplash.com/photo-1600194992538-d800114c4c5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Bathroom Cleaning Service">
+                </div>
+                <div class="service-detail-text">
+                    <h2>Bathroom Cleaning</h2>
+                    <p>Our bathroom cleaning service ensures your bathrooms are sanitized, spotless, and fresh. We tackle all areas including hard-to-reach corners, grout lines, and fixtures to provide a hygienic environment.</p>
+                    <p>Whether you have one bathroom or multiple, our service is priced per unit with a minimum charge for three bathrooms.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Sanitization</strong>
+                                <p>Complete sanitization of all surfaces including toilet, sink, and shower</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Tile & Grout Cleaning</strong>
+                                <p>Deep cleaning of tiles and removing stains from grout lines</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Mirror & Fixture Polishing</strong>
+                                <p>Streak-free cleaning of mirrors and polishing of fixtures</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Floor Deep Clean</strong>
+                                <p>Specialized cleaning for bathroom floors and drains</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <h3>Pricing per Bathroom</h3>
+                        <div style="margin-top: 20px;">
+                            <div class="price-option">
+                                <span class="price-option-name">Price per bathroom</span>
+                                <span class="price-option-value">₹500</span>
+                            </div>
+                            <div class="price-option">
+                                <span class="price-option-name">Minimum charge (3 bathrooms)</span>
+                                <span class="price-option-value">₹1,500</span>
+                            </div>
+                        </div>
+                        
+                        <div class="pricing-note">
+                            * Minimum billing for 3 bathrooms. Additional bathrooms charged at ₹500 each.
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="booking.html" class="btn">Book This Service</a>
+                        <a href="pricing.html" class="btn btn-outline" style="margin-left: 10px;">View Detailed Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Cleaning Service -->
+    <section id="office-cleaning" class="service-detail">
+        <div class="container">
+            <div class="service-detail-content reverse">
+                <div class="service-detail-img">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Office Cleaning Service">
+                </div>
+                <div class="service-detail-text">
+                    <h2>Office Cleaning</h2>
+                    <p>Maintain a clean, professional workspace with our specialized office cleaning services. We understand that a clean office environment boosts productivity and creates a positive impression on clients and employees alike.</p>
+                    <p>Our office cleaning services can be scheduled during or after business hours to minimize disruption to your operations.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Workstation Cleaning</strong>
+                                <p>Desks, chairs, computers, and office equipment</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Common Area Maintenance</strong>
+                                <p>Reception areas, meeting rooms, and break rooms</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Restroom Sanitization</strong>
+                                <p>Complete cleaning and restocking of supplies</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Waste Management</strong>
+                                <p>Emptying trash bins and replacing liners</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <h3>Pricing</h3>
+                        <div class="price-option">
+                            <span class="price-option-name">Small Office (up to 1,000 sq ft)</span>
+                            <span class="price-option-value">₹1,200</span>
+                        </div>
+                        <div class="price-option">
+                            <span class="price-option-name">Medium Office (1,000-3,000 sq ft)</span>
+                            <span class="price-option-value">₹2,000</span>
+                        </div>
+                        <div class="price-option">
+                            <span class="price-option-name">Large Office (3,000+ sq ft)</span>
+                            <span class="price-option-value">Custom Quote</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="booking.html" class="btn">Book This Service</a>
+                        <a href="pricing.html" class="btn btn-outline" style="margin-left: 10px;">View Detailed Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Cleaning Service -->
+    <section id="deep-cleaning" class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-detail-img">
+                    <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Deep Cleaning Service">
+                </div>
+                <div class="service-detail-text">
+                    <h2>Deep Cleaning</h2>
+                    <p>Our deep cleaning service goes beyond regular cleaning to tackle those hard-to-reach areas and stubborn dirt that builds up over time. This comprehensive cleaning is perfect for spring cleaning, move-in/move-out situations, or when you want your space to be immaculately clean.</p>
+                    <p>Our team uses specialized equipment and techniques to ensure every corner of your home or office receives attention.</p>
+                    
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Detailed Surface Cleaning</strong>
+                                <p>Baseboards, door frames, light fixtures, and vents</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Appliance Deep Clean</strong>
+                                <p>Inside and outside of ovens, refrigerators, and microwaves</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Cabinet Cleaning</strong>
+                                <p>Interior and exterior cleaning of cabinets</p>
+                            </div>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Scale and Soap Scum Removal</strong>
+                                <p>Deep cleaning of bathroom tiles, grout, and fixtures</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-pricing">
+                        <h3>Pricing</h3>
+                        <div class="price-option">
+                            <span class="price-option-name">1RK/Studio</span>
+                            <span class="price-option-value">₹2,500</span>
+                        </div>
+                        <div class="price-option">
+                            <span class="price-option-name">1BHK</span>
+                            <span class="price-option-value">₹3,000</span>
+                        </div>
+                        <div class="price-option">
+                            <span class="price-option-name">2BHK</span>
+                            <span class="price-option-value">₹5,000</span>
+                        </div>
+                        <div class="price-option">
+                            <span class="price-option-name">3BHK</span>
+                            <span class="price-option-value">₹6,500</span>
+                        </div>
+                        <div class="price-option">
+                            <span class="price-option-name">4BHK+</span>
+                            <span class="price-option-value">Custom Quote</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="booking.html" class="btn">Book This Service</a>
+                        <a href="pricing.html" class="btn btn-outline" style="margin-left: 10px;">View Detailed Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-on Services -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="section-title">
+                <h2>Add-on Services</h2>
+                <p>Enhance your cleaning experience with these optional services</p>
+            </div>
+            
+            <div class="service-features">
+                <div class="service-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Carpet Shampoo</strong>
+                        <p>Deep cleaning and sanitization of your carpets to remove dirt, stains, and allergens. ₹600 per carpet</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Fridge Cleaning</strong>
+                        <p>Thorough cleaning of your refrigerator including shelves, drawers, and seals. ₹400</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Sofa Shampoo</strong>
+                        <p>Professional cleaning of your sofas and upholstery to remove stains and odors. ₹150 per seat</p>
+                    </div>
+                </div>
+                <div class="service-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Microwave Cleaning</strong>
+                        <p>Complete cleaning of your microwave including interior, exterior, and turntable. ₹200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta">
+        <div class="container">
+            <h2>Ready to Experience Our Cleaning Services?</h2>
+            <p>Book your preferred cleaning service today and enjoy a spotless, fresh environment. Our professional team is ready to exceed your expectations.</p>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="images/logo-white.png" alt="CleanMaster Pro Logo">
+                    </div>
+                    <p>CleanMaster Pro provides professional cleaning services for homes and offices. We are committed to delivering exceptional quality and customer satisfaction.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Cleaning Street, City, Country</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@cleanmasterpro.com</p>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for cleaning tips and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 CleanMaster Pro. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Pricing calculator functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Home cleaning pricing calculator
+            const homeCleaningSizes = document.querySelectorAll('#home-cleaning .apartment-size');
+            const furnishingOptions = document.querySelectorAll('#home-cleaning input[name="furnishing"]');
+            const homeCleaningPrice = document.getElementById('home-cleaning-price');
+            const addOnsPrice = document.getElementById('add-ons-price');
+            const totalPrice = document.getElementById('total-price');
+            
+            // Pricing data
+            const homeCleaningPrices = {
+                '1rk': { furnished: 2000, 'non-furnished': 1500 },
+                '1bhk': { furnished: 2500, 'non-furnished': 2000 },
+                '2bhk': { furnished: 4500, 'non-furnished': 4000 },
+                '3bhk': { furnished: 5500, 'non-furnished': 5000 },
+                '4bhk': { furnished: 7000, 'non-furnished': 6000 },
+                '5bhk': { furnished: 10000, 'non-furnished': 8500 }
+            };
+            
+            // Set initial active size
+            homeCleaningSizes[0].classList.add('active');
+            
+            // Add event listeners to apartment sizes
+            homeCleaningSizes.forEach(size => {
+                size.addEventListener('click', function() {
+                    // Remove active class from all sizes
+                    homeCleaningSizes.forEach(s => s.classList.remove('active'));
+                    // Add active class to clicked size
+                    this.classList.add('active');
+                    // Update price
+                    updateHomeCleaningPrice();
+                });
+            });
+            
+            // Add event listeners to furnishing options
+            furnishingOptions.forEach(option => {
+                option.addEventListener('change', updateHomeCleaningPrice);
+            });
+            
+            function updateHomeCleaningPrice() {
+                const activeSize = document.querySelector('#home-cleaning .apartment-size.active');
+                const furnishingOption = document.querySelector('#home-cleaning input[name="furnishing"]:checked');
+                
+                if (activeSize && furnishingOption) {
+                    const size = activeSize.dataset.size;
+                    const furnishing = furnishingOption.value;
+                    const price = homeCleaningPrices[size][furnishing];
+                    homeCleaningPrice.textContent = `₹${price.toLocaleString()}`;
+                    updateTotalPrice();
+                }
+            }
+            
+            function updateTotalPrice() {
+                const homePrice = parseInt(homeCleaningPrice.textContent.replace('₹', '').replace(',', ''));
+                const addOns = 0; // In a real implementation, this would be calculated based on selected add-ons
+                const total = homePrice + addOns;
+                totalPrice.textContent = `₹${total.toLocaleString()}`;
+            }
+            
+            // Kitchen cleaning pricing calculator
+            const kitchenCleaningSizes = document.querySelectorAll('#kitchen-cleaning .apartment-size');
+            const kitchenCleaningPrice = document.getElementById('kitchen-cleaning-price');
+            
+            const kitchenCleaningPrices = {
+                '1bhk': 1500,
+                '2bhk': 2000,
+                '3bhk': 2500,
+                '4bhk': 3000,
+                '5bhk': 3500
+            };
+            
+            // Set initial active size
+            kitchenCleaningSizes[0].classList.add('active');
+            
+            // Add event listeners to apartment sizes
+            kitchenCleaningSizes.forEach(size => {
+                size.addEventListener('click', function() {
+                    // Remove active class from all sizes
+                    kitchenCleaningSizes.forEach(s => s.classList.remove('active'));
+                    // Add active class to clicked size
+                    this.classList.add('active');
+                    // Update price
+                    updateKitchenCleaningPrice();
+                });
+            });
+            
+            function updateKitchenCleaningPrice() {
+                const activeSize = document.querySelector('#kitchen-cleaning .apartment-size.active');
+                if (activeSize) {
+                    const size = activeSize.dataset.size;
+                    const price = kitchenCleaningPrices[size];
+                    kitchenCleaningPrice.textContent = `₹${price.toLocaleString()}`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
