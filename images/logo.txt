@@ -1,0 +1,3 @@
+CleanMaster Pro Logo
+This is a placeholder for the logo image.
+In a production environment, this would be replaced with an actual logo image file.
